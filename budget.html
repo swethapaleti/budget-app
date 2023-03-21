@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./budget.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3b3c3e8036.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg-container pb-5">
+        <h1 class="text-center">Budget App</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card p-4 mt-4">
+                        <div class="d-flex flex-row justify-content-around">
+                            <div class="m-3 p-2 text-center">
+                                <p class="card-title">Budget</p>
+                                <img class="img mt-2" src="https://assets.ccbp.in/frontend/dynamic-webapps/budget-img.png">
+                                <p id="budgetAmount" class="font-weight-bold pt-4">500</p>
+                            </div>
+                            <div class="m-3 text-center">
+                                <p class="card-title">Expenses</p>
+                                <img class="img2 mt-2" src="https://assets.ccbp.in/frontend/dynamic-webapps/expenses-img.png">
+                                <p id="totalExpensesAmount" class="font-weight-bold pt-4">0</p>
+                            </div>
+                            <div class="m-3 text-center">
+                                <p class="card-title">Balance</p>
+                                <img class="img3 mt-2" src="https://assets.ccbp.in/frontend/dynamic-webapps/balance-img.png">
+                                <p id="balanceAmount" class="font-weight-bold pt-4">500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 mt-3">
+                    <div class="card p-4">
+                        <label>Please enter the Budget</label>
+                        <input id="budgetInput" placeholder="In Rupees" class="input-box">
+                        <p id="budgetInputErrMsg"></p>
+                        <div class="mt-3">
+                            <button id="setBudgetBtn" class="btn btn-primary">Set Budget</button>
+                        </div>
+                    </div>
+                    <div class="card p-4 mt-3">
+                        <label for="expenseTitleInput">Please enter expense title</label>
+                        <input id="expenseTitleInput" placeholder="In Rupees" class="input-box">
+                        <p id="expenseTitleInputErrMsg"></p>
+                        <label for="expenseAmountInput">Please enter expense amount</label>
+                        <input id="expenseAmountInput" placeholder="In Rupees" class="input-box">
+                        <p id="expenseAmountInputErrMsg"></p>
+                        <div class="mt-3 pb-3">
+                            <button id="addExpenseBtn" class="btn btn-dark">Add Expense</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 mt-3">
+                    <div class="card h-100 p-4">
+                        <h1 class="expense-title text-center">Expenses History</h1>
+                        <ul id="expensesHistory" class="list-type">
+                            <li>
+                                <div class="d-flex flex-row justify-content-start">
+                                    <p class="p-3">Expenses title</p>
+                                    <p class="p-3">Amount Spent</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./budget.js" type="text/javascript"></script>
+</body>
+
+</html>
